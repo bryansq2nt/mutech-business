@@ -3,6 +3,21 @@
   min-height: 100vh;
 }
 
+.coverImageWrapper {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.coverImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .header {
   max-width: 800px;
   margin: 0 auto 4rem;

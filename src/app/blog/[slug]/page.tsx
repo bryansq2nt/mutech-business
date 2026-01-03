@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import { unstable_cache } from 'next/cache'
 import { getPostWithContentBySlug, getAllPublishedSlugs } from '@/lib/notion/queries'
 import Navigation from '@/components/Navigation'
-import PostBody from '@/components/blog/PostBody'
+import MarkdownContent from '@/components/blog/MarkdownContent'
 import styles from './page.module.css'
 
 export const revalidate = 300 // 5 minutes
@@ -69,6 +70,16 @@ export async function generateMetadata({
       type: 'article',
       publishedTime: post.publishedAt,
       url: `${siteUrl}/blog/${post.slug}`,
+      ...(post.coverImage && {
+        images: [
+          {
+            url: post.coverImage,
+            width: 1200,
+            height: 675,
+            alt: post.title,
+          },
+        ],
+      }),
     },
   }
 }
@@ -102,6 +113,23 @@ export default async function BlogPostPage({
       <main style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', minHeight: '100vh' }}>
         <article className={styles.article}>
           <div className="container">
+            {post.coverImage && (
+              <div className={styles.coverImageWrapper}>
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  width={1200}
+                  height={675}
+                  className={styles.coverImage}
+                  priority
+                  unoptimized={
+                    post.coverImage.includes('notion.so') ||
+                    post.coverImage.includes('s3.us-west-2.amazonaws.com')
+                  }
+                />
+              </div>
+            )}
+
             <header className={styles.header}>
               <h1 className={styles.title}>{post.title}</h1>
               {post.excerpt && (
@@ -111,7 +139,7 @@ export default async function BlogPostPage({
             </header>
 
             <div className={styles.content}>
-              <PostBody markdown={post.markdown} />
+              <MarkdownContent markdown={post.markdown} />
             </div>
           </div>
         </article>

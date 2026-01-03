@@ -59,6 +59,7 @@ export function mapNotionPageToPost(page: Page): BlogPost | null {
     }
 
     // Extract CoverImage (optional)
+    // Preferir page.cover si está seteado, sino buscar propiedad CoverImage
     let coverImage: string | undefined
     if (page.cover) {
       if (page.cover.type === 'external') {
@@ -66,10 +67,27 @@ export function mapNotionPageToPost(page: Page): BlogPost | null {
       } else if (page.cover.type === 'file') {
         coverImage = page.cover.file.url
       }
+    } else {
+      // Fallback: buscar propiedad CoverImage (Files & media)
+      const coverImageProperty = properties.CoverImage
+      if (
+        coverImageProperty &&
+        coverImageProperty.type === 'files' &&
+        coverImageProperty.files &&
+        coverImageProperty.files.length > 0
+      ) {
+        const file = coverImageProperty.files[0]
+        if (file.type === 'external') {
+          coverImage = file.external.url
+        } else if (file.type === 'file') {
+          coverImage = file.file.url
+        }
+      }
     }
 
     return {
       id: page.id,
+      pageId: page.id, // ID real de la página para obtener bloques
       title,
       slug,
       excerpt,

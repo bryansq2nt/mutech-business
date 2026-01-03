@@ -1,5 +1,6 @@
 export type BlogPost = {
   id: string
+  pageId: string // ID real de la página para obtener bloques
   title: string
   slug: string
   excerpt: string
@@ -8,6 +9,6 @@ export type BlogPost = {
 }
 
 export type BlogPostWithContent = BlogPost & {
-  markdown: string
+  markdown: string // Markdown convertido desde bloques de Notion
 }
 

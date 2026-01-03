@@ -1,0 +1,266 @@
+/**
+ * Estilos tipo "prose" para renderizado de Markdown.
+ * Diseñado para máxima legibilidad y estética profesional.
+ * Similar a Tailwind Typography pero con CSS Modules.
+ */
+
+.markdownContent {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #cbd5e1;
+  font-size: 1.125rem; /* 18px - equivalente a prose-lg */
+}
+
+/* ============================================
+   HEADINGS
+   ============================================ */
+.heading1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.heading2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.heading3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+.heading4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   PARAGRAPHS
+   ============================================ */
+.paragraph {
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+.list {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  color: #cbd5e1;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  padding-left: 0.5rem;
+}
+
+.listItem::marker {
+  color: #06b6d4;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+.link {
+  color: #06b6d4;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #3b82f6;
+  border-bottom-color: rgba(59, 130, 246, 0.5);
+}
+
+/* ============================================
+   CODE
+   ============================================ */
+.inlineCode {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-size: 0.9em;
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.codeBlock {
+  display: block;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* ============================================
+   BLOCKQUOTES
+   ============================================ */
+.blockquote {
+  border-left: 4px solid #06b6d4;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  color: #94a3b8;
+  font-style: italic;
+  background: rgba(6, 182, 212, 0.05);
+  border-radius: 4px;
+}
+
+/* ============================================
+   IMAGES
+   ============================================ */
+.imageFigure {
+  margin: 2rem 0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imageCaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ============================================
+   TABLES (GitHub Flavored Markdown)
+   ============================================ */
+.tableWrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.tableHead {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.tableHeader {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+}
+
+.tableRow {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.tableRow:hover {
+  background: rgba(6, 182, 212, 0.05);
+}
+
+.tableCell {
+  padding: 0.75rem 1rem;
+  color: #cbd5e1;
+}
+
+/* ============================================
+   HORIZONTAL RULE
+   ============================================ */
+.hr {
+  border: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  margin: 2rem 0;
+}
+
+/* ============================================
+   TEXT EMPHASIS
+   ============================================ */
+.strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+.em {
+  font-style: italic;
+  color: #e2e8f0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .markdownContent {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .heading1 {
+    font-size: 2rem;
+  }
+
+  .heading2 {
+    font-size: 1.75rem;
+  }
+
+  .heading3 {
+    font-size: 1.25rem;
+  }
+
+  .list {
+    padding-left: 1.5rem;
+  }
+
+  .tableWrapper {
+    font-size: 0.875rem;
+  }
+}
+

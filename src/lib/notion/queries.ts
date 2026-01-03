@@ -1,8 +1,8 @@
 import { getNotionClient, getDatabaseId } from './client'
 import { mapNotionPageToPost } from '../blog/mapper'
 import { BlogPost } from '../blog/types'
-import { getPostMarkdown } from '../blog/content'
 import { BlogPostWithContent } from '../blog/types'
+import { getPostMarkdown } from '../blog/content'
 
 // Obtener Database ID normalizado y validado
 let DATABASE_ID: string | null = null
@@ -87,6 +87,13 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   }
 }
 
+/**
+ * Obtiene el contenido de un post convertido a Markdown.
+ * Usa notion-to-md para convertir los bloques de Notion a Markdown.
+ * 
+ * @param slug - Slug del post
+ * @returns Post con contenido en Markdown o null si no existe
+ */
 export async function getPostWithContentBySlug(
   slug: string
 ): Promise<BlogPostWithContent | null> {
@@ -97,7 +104,8 @@ export async function getPostWithContentBySlug(
   }
 
   try {
-    const markdown = await getPostMarkdown(post.id)
+    // Convertir bloques de Notion a Markdown usando notion-to-md
+    const markdown = await getPostMarkdown(post.pageId)
     return {
       ...post,
       markdown,
