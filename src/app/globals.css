@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #E5E7EB;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Typography System */
+h1, h2, h3 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 600; /* SemiBold */
+  color: #E5E7EB;
+  line-height: 1.2;
+}
+
+h4, h5, h6 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 500; /* Medium */
+  color: #E5E7EB;
+  line-height: 1.3;
+}
+
+p, li, span, div {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 400; /* Regular */
+  color: #E5E7EB;
+}
+
+.text-secondary {
+  color: #9CA3AF;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0E7490;
+  transition: color 0.2s ease;
+}
+
+/* Buttons / CTAs */
+button, .btn {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-weight: 500; /* Medium */
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #E5E7EB;
+}
+
+.btn-primary {
+  background-color: #0E7490;
+  color: #E5E7EB;
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #155E75;
+}
+
+a.btn-primary {
+  background-color: #0E7490;
+  color: #E5E7EB;
+}
+
+a.btn-primary:hover {
+  background-color: #155E75;
+  color: #E5E7EB;
+}
+
+/* Surface / Container */
+.surface {
+  background-color: #111827;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Intentional Whitespace */
+.section {
+  padding: 4rem 0;
+}
+
+.section-large {
+  padding: 6rem 0;
+}

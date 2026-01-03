@@ -1,0 +1,179 @@
+📄 Mutech Business – MVP Context (Cursor Master Context)
+
+Project Purpose
+
+Build the MVP website for Mutech Business, a consulting firm focused on helping entrepreneurs and small businesses start correctly by avoiding poor early decisions in structure, platforms, and positioning.
+
+This is not a mass-market product.
+This is not a conversion-optimized funnel.
+
+Primary Objective:
+Receive few but highly qualified applications from clients who value structure, clarity, and boundaries.
+
+Success Metric:
+Low volume, high-quality applications that align with Mutech’s way of thinking.
+
+🧠 Core Philosophy (Non-Negotiable)
+
+Mutech Business does not sell:
+
+websites
+
+automation
+
+branding for aesthetics
+
+motivation or hype
+
+Mutech Business sells:
+
+structured thinking
+
+decision clarity
+
+prevention of early irreversible mistakes
+
+The website must communicate how we think, not just what we do.
+
+🗣 Tone & Voice (Strict Rules)
+
+DO
+
+Clear
+
+Calm
+
+Firm
+
+Honest
+
+Slightly challenging
+
+DO NOT
+
+Use motivational language
+
+Use empty startup phrases
+
+Promise success or results
+
+Sound “friendly-salesy”
+
+Use hype or exaggerated claims
+
+Mindset:
+“This is how we work. If it doesn’t fit you, that’s okay.”
+
+🧱 Key Messages (Used as Filters)
+
+These ideas must be clearly communicated (not necessarily as slogans):
+
+“We don’t help you execute ideas. We help you not start wrong.”
+
+“Most businesses fail due to small decisions made early.”
+
+“This package provides a clear foundation, not guaranteed success.”
+
+“If you are looking for something fast and cheap, this service is not for you.”
+
+If a visitor feels uncomfortable reading this, that is intended.
+
+📝 Application Form (Critical UX Rule)
+
+This is NOT a contact form.
+
+It is an application designed to:
+
+slow the user down
+
+force reflection
+
+self-qualify the applicant
+
+Fields:
+
+Business type
+
+City / location
+
+Current state (what already exists)
+
+Main pain point
+
+Desired outcome
+
+Urgency level
+
+No extra fields.
+No “friendly” copy.
+No instant gratification language.
+
+🧩 Site Structure (MVP Only)
+
+The MVP website includes ONLY:
+
+Home
+
+Clear positioning
+
+Philosophy-first hero
+
+Who this is / isn’t for
+
+CTA → Apply
+
+Kickstarter Package
+
+What is included
+
+What is explicitly NOT included
+
+Clear boundaries
+
+No upsell language
+
+Apply
+
+Application form only
+
+❌ No chatbot
+❌ No dashboards
+❌ No payments
+❌ No automation explanations
+
+🎨 Visual Direction
+
+Minimal
+
+Clean
+
+Structured
+
+High whitespace
+
+Strong hierarchy
+
+No trendy animations
+
+No “happy startup” visuals
+
+Design should feel controlled, not playful.
+
+⚙ Technical Direction (Secondary)
+
+Technology exists to serve clarity, not impress.
+
+Framework: Next.js (App Router)
+
+Styling: Custom CSS (no generic Tailwind look)
+
+Animations: Minimal or none
+
+Focus: Readability and intent
+
+✅ Definition of “Done”
+
+The MVP is successful if a visitor finishes reading and thinks:
+
+“These people think differently.
+If I work with them, I won’t be improvising.”
