@@ -29,6 +29,7 @@ export default function Navigation() {
         <div className={styles.navLinks}>
           <Link href="/">Inicio</Link>
           <Link href="/kickstarter-package">Paquete Starter</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/apply">Solicitar</Link>
         </div>
       </div>
