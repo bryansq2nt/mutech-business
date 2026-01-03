@@ -15,16 +15,16 @@ export function mapNotionPageToPost(page: PageObjectResponse): BlogPost | null {
     ) {
       return null
     }
-    const title = titleProperty.title[0].plain_text
+    const title = titleProperty.title[0].plain_text.trim()
 
     // Extract Slug (can be rich_text or title type)
     const slugProperty = properties.Slug
     let slug = ''
     
     if (slugProperty?.type === 'rich_text' && slugProperty.rich_text?.length > 0) {
-      slug = slugProperty.rich_text[0].plain_text
+      slug = slugProperty.rich_text[0].plain_text.trim()
     } else if (slugProperty?.type === 'title' && slugProperty.title?.length > 0) {
-      slug = slugProperty.title[0].plain_text
+      slug = slugProperty.title[0].plain_text.trim()
     } else {
       return null
     }

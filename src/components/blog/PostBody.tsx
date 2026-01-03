@@ -10,7 +10,6 @@ interface PostBodyProps {
 export default function PostBody({ markdown }: PostBodyProps) {
   return (
     <div className={styles.postBody}>
-      {/* @ts-expect-error - React 19 type compatibility issue with react-markdown */}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSanitize]}

@@ -28,7 +28,6 @@ export default function MarkdownContent({ markdown }: MarkdownContentProps) {
 
   return (
     <div className={styles.markdownContent}>
-      {/* @ts-expect-error - React 19 type compatibility issue with react-markdown */}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSanitize]}
