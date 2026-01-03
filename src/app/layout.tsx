@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
+import { Analytics } from "@vercel/analytics/next"
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ['400', '500', '600'],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={ibmPlexSans.variable}>
       <body>{children}</body>
+      <Analytics />
     </html>
   )
 }
