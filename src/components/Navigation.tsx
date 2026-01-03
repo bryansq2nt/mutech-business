@@ -28,8 +28,8 @@ export default function Navigation() {
         </Link>
         <div className={styles.navLinks}>
           <Link href="/">Inicio</Link>
-          <Link href="/kickstarter-package">Servicios</Link>
-          <Link href="/apply">Aplicar</Link>
+          <Link href="/kickstarter-package">Paquete Starter</Link>
+          <Link href="/apply">Solicitar</Link>
         </div>
       </div>
     </nav>

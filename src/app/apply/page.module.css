@@ -1,55 +1,66 @@
-/* Hero Section */
+/* Apply Layout */
+.applyLayout {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+}
+
+/* Hero Section - Compact Header */
 .hero {
-  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8rem 2rem 4rem;
+  padding: 2rem 2rem 1.5rem;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  flex-shrink: 0;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #94a3b8;
   max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: 0 auto 0.75rem;
+  line-height: 1.5;
 }
 
 .heroTime {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.25rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
   background: rgba(6, 182, 212, 0.1);
   border: 1px solid rgba(6, 182, 212, 0.3);
   border-radius: 50px;
   color: #06b6d4;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
 /* Progress Bar */
 .progressContainer {
   max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  flex-shrink: 0;
+  z-index: 100;
 }
 
 .progressBar {
   width: 100%;
-  height: 8px;
+  height: 6px;
   background: rgba(30, 41, 59, 0.5);
   border-radius: 10px;
   overflow: hidden;
@@ -64,16 +75,22 @@
 
 .progressText {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   color: #94a3b8;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 /* Form Container */
 .formContainer {
   max-width: 700px;
-  margin: 0 auto 6rem;
-  padding: 0 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 0;
 }
 
 .questionCard {
@@ -81,11 +98,15 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(148, 163, 184, 0.1);
   border-radius: 20px;
-  padding: 3rem;
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 200px);
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 
 .questionCard.active {
@@ -97,40 +118,72 @@
   display: none;
 }
 
+.questionContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+  min-height: 0;
+}
+
+@media (min-width: 768px) {
+  .questionContent {
+    padding: 1.5rem;
+  }
+}
+
+.questionContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.questionContent::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 3px;
+}
+
+.questionContent::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+.questionContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
 .questionNumber {
   display: inline-flex;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: linear-gradient(135deg, #06b6d4, #3b82f6);
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .questionLabel {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   line-height: 1.3;
 }
 
 .questionHelper {
   color: #94a3b8;
-  font-size: 0.95rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 /* Input Styles */
 .input,
 .textarea {
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.25rem;
   background: rgba(15, 23, 42, 0.5);
   border: 2px solid rgba(148, 163, 184, 0.2);
   border-radius: 12px;
@@ -148,7 +201,7 @@
 }
 
 .textarea {
-  min-height: 120px;
+  min-height: 100px;
   resize: vertical;
 }
 
@@ -223,16 +276,83 @@
   color: #06b6d4;
 }
 
+/* Chips / Multi-select */
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.chip {
+  padding: 0.75rem 1.25rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 50px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: rgba(6, 182, 212, 0.5);
+  background: rgba(15, 23, 42, 0.7);
+  transform: translateY(-2px);
+}
+
+.chipSelected {
+  border-color: #06b6d4;
+  background: rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+}
+
+.chipSelected:hover {
+  background: rgba(6, 182, 212, 0.25);
+}
+
+.otherTextarea {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Personal Data Intro */
+.personalDataIntro {
+  background: rgba(6, 182, 212, 0.1);
+  border-left: 3px solid #06b6d4;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.personalDataIntro p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* Buttons */
 .buttonGroup {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 12px;
+  padding: 1rem 1.5rem;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
 }
 
 .btn {
   flex: 1;
-  padding: 1rem 2rem;
+  padding: 14px 18px;
+  min-height: 48px;
   border: none;
   border-radius: 12px;
   font-size: 1rem;
@@ -246,6 +366,9 @@
   background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+
+  height: 25px;
+  width: 100px;
 }
 
 .btnPrimary:hover {
@@ -263,11 +386,25 @@
   background: rgba(30, 41, 59, 0.5);
   color: #cbd5e1;
   border: 2px solid rgba(148, 163, 184, 0.2);
+
+  height: 25px;
+  width: 100px;
 }
 
 .btnSecondary:hover {
   background: rgba(30, 41, 59, 0.8);
   border-color: rgba(148, 163, 184, 0.4);
+}
+
+/* Honeypot - Anti-bot field */
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Confirmation */
@@ -330,19 +467,60 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .applyLayout {
+    min-height: auto;
+    padding-top: 72px;
+  }
+
+  .hero {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .progressContainer {
+    padding: 0.75rem 1.5rem;
+    position: relative;
+  }
+
+  .formContainer {
+    padding: 0 1.5rem 2rem;
   }
 
   .questionCard {
-    padding: 2rem 1.5rem;
+    max-height: none;
+    border-radius: 16px;
+  }
+
+  .questionContent {
+    padding: 1.25rem;
+    padding-bottom: 0.5rem;
   }
 
   .questionLabel {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .buttonGroup {
     flex-direction: column-reverse;
+    padding: 1rem 1.25rem;
+    position: relative;
+  }
+}
+
+/* Desktop: Sticky Progress Bar */
+@media (min-width: 768px) {
+  .progressContainer {
+    position: sticky;
+    top: 72px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
   }
 }

@@ -10,7 +10,6 @@ export default function KickstarterPackage() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <span className={styles.heroTag}>✓ Solo 5 espacios disponibles este mes</span>
             <h1>De invisible a encontrable en Google en 2 semanas</h1>
             <p>Para personas que quieren iniciar un negocio sin empezar mal</p>
             
@@ -18,13 +17,13 @@ export default function KickstarterPackage() {
               <ul>
                 <li>Los clientes lo encuentran sin pedirle el contacto</li>
                 <li>Su sitio web explica su servicio por usted</li>
-                <li>Da confianza desde el primer contacto</li>
-                <li>Menos tiempo respondiendo lo mismo</li>
+                <li>Da confianza a primera vista</li>
+                <li>Su negocio comienza a dar frutos</li>
               </ul>
             </div>
 
             <div className={styles.heroCta}>
-              <Link href="/apply" className={styles.ctaButton}>Aplicar ahora (2-3 min)</Link>
+              <Link href="/apply" className={styles.ctaButton}>Ver si este paquete es para mí</Link>
               <p className={styles.ctaMicrocopy}>Respuesta en 24-48 horas</p>
             </div>
           </div>
@@ -43,7 +42,7 @@ export default function KickstarterPackage() {
                   <li>Explicando su negocio una y otra vez</li>
                   <li>Dando su número personal a todos</li>
                   <li>No aparece en búsquedas</li>
-                  <li>¿Dónde lo encuentro?</li>
+                  <li>¿Que producto ofrece?</li>
                 </ul>
               </div>
 
@@ -53,7 +52,7 @@ export default function KickstarterPackage() {
                   <li>Su negocio se encuentra fácil</li>
                   <li>Reservaciones mientras duermes o trabajas</li>
                   <li>Tu sitio explica todo por ti 24/7</li>
-                  <li>Una imagen profesional desde el inicio</li>
+                  <li>Los clientes le llaman</li>
                 </ul>
               </div>
             </div>
@@ -61,7 +60,7 @@ export default function KickstarterPackage() {
   <p className={styles.testimonialText}>
     "Quería iniciar mi negocio, sabía que hacía bien mi trabajo, pero nadie me conocía.
     No tenía clientes ni recomendaciones.
-    Decidí ordenar mi presencia en línea para que la gente pudiera encontrarme y entender qué hacía.
+    Decidí iniciar mi presencia en línea para que la gente pudiera encontrarme y entender qué hacía.
     Con el tiempo empezaron a llegar los primeros contactos.
     Sin presencia en línea, eso no habría pasado."
   </p>
@@ -85,8 +84,8 @@ export default function KickstarterPackage() {
         {/* Stats Section */}
         <section className={styles.section}>
           <div className="container">
-            <h2 className={styles.sectionTitle}>¿Por qué ahora?</h2>
-            <p className={styles.sectionSubtitle}>Cada día que esperas cuesta dinero</p>
+            <h2 className={styles.sectionTitle}>¿Por qué iniciar ahora?</h2>
+            <p className={styles.sectionSubtitle}>Cada día que esperas retrasas tu negocio.</p>
 
             <div className={styles.statsGrid}>
               <div className={styles.statCard}>
@@ -144,8 +143,8 @@ export default function KickstarterPackage() {
               </div>
 
               <div className={styles.includeItem}>
-                <h3>📖 Guía de marca</h3>
-                <p>Cómo usar tu logo en camisas, tarjetas, stickers, etc.</p>
+                <h3>📄 Guía para crear contenido</h3>
+                <p>Para que no publique solo una foto, sino algo que explique su negocio.</p>
               </div>
             </div>
 
@@ -206,7 +205,7 @@ export default function KickstarterPackage() {
             <p style={{ fontSize: '1.3rem', color: '#94a3b8', marginBottom: '3rem', lineHeight: '1.6', marginTop: '2rem' }}>
               Si esto le hace sentido, aplique. Revisamos su caso y le decimos si este paquete es para usted.
             </p>
-            <Link href="/apply" className={styles.ctaButton}>Aplicar ahora</Link>
+            <Link href="/apply" className={styles.ctaButton}>Ver si este paquete es para mí</Link>
           </div>
         </section>
       </main>
