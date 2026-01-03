@@ -1,7 +1,7 @@
-import { Page } from '@notionhq/client/build/src/api-types'
+import type { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints'
 import { BlogPost } from './types'
 
-export function mapNotionPageToPost(page: Page): BlogPost | null {
+export function mapNotionPageToPost(page: PageObjectResponse): BlogPost | null {
   try {
     const properties = page.properties as any
 
@@ -99,4 +99,3 @@ export function mapNotionPageToPost(page: Page): BlogPost | null {
     return null
   }
 }
-

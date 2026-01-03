@@ -8,6 +8,7 @@ import MarkdownContent from '@/components/blog/MarkdownContent'
 import styles from './page.module.css'
 
 export const revalidate = 300 // 5 minutes
+export const dynamic = 'force-dynamic'
 
 const getCachedPost = (slug: string) =>
   unstable_cache(

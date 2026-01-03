@@ -28,26 +28,27 @@ export default function MarkdownContent({ markdown }: MarkdownContentProps) {
 
   return (
     <div className={styles.markdownContent}>
+      {/* @ts-expect-error - React 19 type compatibility issue with react-markdown */}
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSanitize]}
         components={{
           // Headings con estilos personalizados
-          h1: ({ node, ...props }) => <h1 className={styles.heading1} {...props} />,
-          h2: ({ node, ...props }) => <h2 className={styles.heading2} {...props} />,
-          h3: ({ node, ...props }) => <h3 className={styles.heading3} {...props} />,
-          h4: ({ node, ...props }) => <h4 className={styles.heading4} {...props} />,
+          h1: ({ node, ref, ...props }: any) => <h1 className={styles.heading1} {...props} />,
+          h2: ({ node, ref, ...props }: any) => <h2 className={styles.heading2} {...props} />,
+          h3: ({ node, ref, ...props }: any) => <h3 className={styles.heading3} {...props} />,
+          h4: ({ node, ref, ...props }: any) => <h4 className={styles.heading4} {...props} />,
           
           // Párrafos
-          p: ({ node, ...props }) => <p className={styles.paragraph} {...props} />,
+          p: ({ node, ref, ...props }: any) => <p className={styles.paragraph} {...props} />,
           
           // Listas
-          ul: ({ node, ...props }) => <ul className={styles.list} {...props} />,
-          ol: ({ node, ...props }) => <ol className={styles.list} {...props} />,
-          li: ({ node, ...props }) => <li className={styles.listItem} {...props} />,
+          ul: ({ node, ref, ...props }: any) => <ul className={styles.list} {...props} />,
+          ol: ({ node, ref, ...props }: any) => <ol className={styles.list} {...props} />,
+          li: ({ node, ref, ...props }: any) => <li className={styles.listItem} {...props} />,
           
           // Links
-          a: ({ node, ...props }) => (
+          a: ({ node, ref, ...props }: any) => (
             <a className={styles.link} target="_blank" rel="noopener noreferrer" {...props} />
           ),
           
@@ -62,10 +63,10 @@ export default function MarkdownContent({ markdown }: MarkdownContentProps) {
               </code>
             )
           },
-          pre: ({ node, ...props }) => <pre className={styles.pre} {...props} />,
+          pre: ({ node, ref, ...props }: any) => <pre className={styles.pre} {...props} />,
           
           // Blockquotes
-          blockquote: ({ node, ...props }) => (
+          blockquote: ({ node, ref, ...props }: any) => (
             <blockquote className={styles.blockquote} {...props} />
           ),
           
@@ -99,23 +100,23 @@ export default function MarkdownContent({ markdown }: MarkdownContentProps) {
           },
           
           // Tablas (soporte GFM)
-          table: ({ node, ...props }) => (
+          table: ({ node, ref, ...props }: any) => (
             <div className={styles.tableWrapper}>
               <table className={styles.table} {...props} />
             </div>
           ),
-          thead: ({ node, ...props }) => <thead className={styles.tableHead} {...props} />,
-          tbody: ({ node, ...props }) => <tbody className={styles.tableBody} {...props} />,
-          tr: ({ node, ...props }) => <tr className={styles.tableRow} {...props} />,
-          th: ({ node, ...props }) => <th className={styles.tableHeader} {...props} />,
-          td: ({ node, ...props }) => <td className={styles.tableCell} {...props} />,
+          thead: ({ node, ref, ...props }: any) => <thead className={styles.tableHead} {...props} />,
+          tbody: ({ node, ref, ...props }: any) => <tbody className={styles.tableBody} {...props} />,
+          tr: ({ node, ref, ...props }: any) => <tr className={styles.tableRow} {...props} />,
+          th: ({ node, ref, ...props }: any) => <th className={styles.tableHeader} {...props} />,
+          td: ({ node, ref, ...props }: any) => <td className={styles.tableCell} {...props} />,
           
           // Horizontal rule
-          hr: ({ node, ...props }) => <hr className={styles.hr} {...props} />,
+          hr: ({ node, ref, ...props }: any) => <hr className={styles.hr} {...props} />,
           
           // Strong y em
-          strong: ({ node, ...props }) => <strong className={styles.strong} {...props} />,
-          em: ({ node, ...props }) => <em className={styles.em} {...props} />,
+          strong: ({ node, ref, ...props }: any) => <strong className={styles.strong} {...props} />,
+          em: ({ node, ref, ...props }: any) => <em className={styles.em} {...props} />,
         }}
       >
         {markdown}
@@ -123,4 +124,3 @@ export default function MarkdownContent({ markdown }: MarkdownContentProps) {
     </div>
   )
 }
-
