@@ -237,7 +237,7 @@ export default function PresenciaOnline() {
             O incluso 1-2 veces al mes si el contenido es bueno.
           </p>
           <p>
-            <strong>Calidad > cantidad.</strong> Un post que responde una pregunta real vale más 
+            <strong>Calidad vs cantidad.</strong> Un post que responde una pregunta real vale más 
             que 10 posts genéricos.
           </p>
 
