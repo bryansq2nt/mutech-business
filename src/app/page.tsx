@@ -2,24 +2,28 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import styles from './page.module.css'
 
+
+
 export default function Home() {
   return (
     <>
+    
       <Navigation />
       <main style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }}>
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroContent}>
-            <h1>Empezar un negocio no es fácil.<br />Hacerlo bien desde el inicio marca la diferencia.</h1>
-            <p>Está aquí porque quiere empezar con dirección y evitar errores desde el inicio.</p>
+          <div className={styles.heroPreHeadline}>Comenzar un negocio no es fácil.</div>
+          <h1>Hacerlo bien desde el inicio<br /><span className={styles.heroEmphasis}>marca la diferencia.</span></h1>
+            <p>Está aquí porque quiere hacer las cosas bien.</p>
             
             <div className={styles.heroFeatures}>
-              <div className={styles.featureTag}>✓ Conseguir mis primeros clientes</div>
               <div className={styles.featureTag}>✓ Aparecer en Google</div>
-              <div className={styles.featureTag}>✓ Verme profesional desde el inicio</div>
+              <div className={styles.featureTag}>✓ Llegar a mas clientes</div>
+              <div className={styles.featureTag}>✓ Trabajos profesionales</div>
             </div>
 
-            <Link href="/apply" className={styles.ctaButton}>Ver si este paquete es para mí</Link>
+            <Link href="/apply" className={styles.ctaButton}>Iniciar mi presencia en linea</Link>
             <p className={styles.ctaSubtitle}>Toma 2–3 minutos</p>
           </div>
         </section>
