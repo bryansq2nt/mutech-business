@@ -26,7 +26,12 @@ export default function LoEsencial() {
               <p>Qué es, como funciona y por que la gente no sabe lo que es el velo corporativo?</p>
               <span className={styles.badge}>12 min de lectura</span>
             </Link>
-{/* 
+            <Link href="/lo-esencial-para-tu-negocio/tipos-de-negocio-en-virginia" className={styles.guideCard}>
+              <h3>¿Qué tipo de negocio estás creando en Virginia?</h3>
+              <p>Sole Proprietor, Partnership, LLC y S-Corp — explicado sin rodeos</p>
+              <span className={styles.badge}>~10 min de lectura</span>
+            </Link>
+            {/* 
             <Link href="/lo-esencial-para-tu-negocio/ein-cuenta-bancaria" className={styles.guideCard}>
               <h3>EIN + Cuenta Bancaria</h3>
               <p>Cómo separar tu negocio de tu vida personal</p>
