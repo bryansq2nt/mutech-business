@@ -11,7 +11,7 @@ const LLCBlogPost = () => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('[data-section]');
       let current = '';
-      
+
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop;
         if (window.scrollY >= sectionTop - 100) {
@@ -21,7 +21,7 @@ const LLCBlogPost = () => {
           }
         }
       });
-      
+
       setActiveSection(current);
     };
 
@@ -37,9 +37,9 @@ const LLCBlogPost = () => {
   };
 
   return (
-    
+
     <div className={styles.blogContainer}>
-            <Navigation />
+      <Navigation />
 
       {/* Hero Section */}
       <section className={styles.hero}>
@@ -60,71 +60,71 @@ const LLCBlogPost = () => {
         <aside className={styles.tocCard}>
           <h3 className={styles.tocTitle}>Contenido</h3>
           <nav className={styles.tocNav}>
-            <a 
-              href="#seccion-1" 
+            <a
+              href="#seccion-1"
               className={`${styles.tocLink} ${activeSection === 'seccion-1' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-1'); }}
             >
               1. No necesita ciudadanía
             </a>
-            <a 
-              href="#seccion-2" 
+            <a
+              href="#seccion-2"
               className={`${styles.tocLink} ${activeSection === 'seccion-2' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-2'); }}
             >
               2. Qué es una LLC
             </a>
-            <a 
-              href="#seccion-3" 
+            <a
+              href="#seccion-3"
               className={`${styles.tocLink} ${activeSection === 'seccion-3' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-3'); }}
             >
               3. El mito común
             </a>
-            <a 
-              href="#seccion-4" 
+            <a
+              href="#seccion-4"
               className={`${styles.tocLink} ${activeSection === 'seccion-4' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-4'); }}
             >
               4. LLC ≠ Negocio
             </a>
-            <a 
-              href="#seccion-5" 
+            <a
+              href="#seccion-5"
               className={`${styles.tocLink} ${activeSection === 'seccion-5' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-5'); }}
             >
               5. El velo corporativo
             </a>
-            <a 
-              href="#seccion-6" 
+            <a
+              href="#seccion-6"
               className={`${styles.tocLink} ${activeSection === 'seccion-6' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-6'); }}
             >
               6. 4 errores que rompen protección
             </a>
-            <a 
-              href="#seccion-7" 
+            <a
+              href="#seccion-7"
               className={`${styles.tocLink} ${activeSection === 'seccion-7' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-7'); }}
             >
               7. Orden correcto
             </a>
-            <a 
-              href="#seccion-8" 
+            <a
+              href="#seccion-8"
               className={`${styles.tocLink} ${activeSection === 'seccion-8' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-8'); }}
             >
               8. Si cometió errores
             </a>
-            <a 
-              href="#seccion-9" 
+            <a
+              href="#seccion-9"
               className={`${styles.tocLink} ${activeSection === 'seccion-9' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-9'); }}
             >
               9. Qué debe tener claro
             </a>
-            <a 
-              href="#seccion-10" 
+            <a
+              href="#seccion-10"
               className={`${styles.tocLink} ${activeSection === 'seccion-10' ? styles.active : ''}`}
               onClick={(e) => { e.preventDefault(); scrollToSection('seccion-10'); }}
             >
@@ -137,7 +137,7 @@ const LLCBlogPost = () => {
           {/* Sección 1 */}
           <section id="seccion-1" data-section="seccion-1" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>01 </span> No necesita ser ciudadano americano para abrir una LLC</h2>
             </div>
 
@@ -161,7 +161,7 @@ const LLCBlogPost = () => {
           {/* Sección 2 */}
           <section id="seccion-2" data-section="seccion-2" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>02 </span> Qué es una LLC (en una frase útil)</h2>
             </div>
 
@@ -185,14 +185,14 @@ const LLCBlogPost = () => {
           {/* Sección 3 */}
           <section id="seccion-3" data-section="seccion-3" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>03 </span> El mito que confunde a casi todos</h2>
             </div>
 
             <div className={styles.mythBox}>
               <h3 className={styles.mythTitle}>A la mayoría solo les dicen esto:</h3>
               <div className={styles.mythQuote}>"Para comenzar un negocio tienes que tener una LLC."</div>
-              
+
               <div className={styles.mythSteps}>
                 <div className={styles.mythStep}>
                   <span className={styles.stepNumber}>1</span>
@@ -218,7 +218,7 @@ const LLCBlogPost = () => {
           {/* Sección 4 */}
           <section id="seccion-4" data-section="seccion-4" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>04 </span> La LLC NO es el negocio</h2>
             </div>
 
@@ -253,20 +253,20 @@ const LLCBlogPost = () => {
           {/* Sección 5 */}
           <section id="seccion-5" data-section="seccion-5" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>05 </span> El velo corporativo explicado como una pared</h2>
             </div>
 
             <div className={styles.metaphorDiagram}>
               <p className={styles.metaphorIntro}>Imagine una pared invisible entre:</p>
-              
+
               <div className={styles.wallDiagram}>
                 <div className={`${styles.wallSide} ${styles.wallSideBusiness}`}>
                   <h4>Los problemas del negocio</h4>
                   <ul>
-                  <li>Deudas comerciales</li>
+                    <li>Deudas comerciales</li>
 
-                  <li>Responsabilidades</li>
+                    <li>Responsabilidades</li>
 
                     <li>Demandas</li>
                   </ul>
@@ -315,7 +315,7 @@ const LLCBlogPost = () => {
           {/* Sección 6 */}
           <section id="seccion-6" data-section="seccion-6" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>06 </span> Las 4 cosas que rompen la protección</h2>
             </div>
 
@@ -324,7 +324,7 @@ const LLCBlogPost = () => {
             <div className={`${styles.errorsGrid} ${styles.errorsGridSix}`}>
               <div className={styles.errorCard}>
                 <div className={styles.errorNumber}>1</div>
-                
+
                 <h3 className={styles.errorTitle}>Mezclar cuentas</h3>
                 <div className={styles.errorContent}>
                   <p>Usar la cuenta del negocio para gastos personales o pagar gastos del negocio con su cuenta personal.</p>
@@ -415,7 +415,7 @@ const LLCBlogPost = () => {
           {/* Sección 7 */}
           <section id="seccion-7" data-section="seccion-7" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>07 </span> El orden correcto para que la LLC sí funcione</h2>
             </div>
 
@@ -478,7 +478,7 @@ const LLCBlogPost = () => {
           {/* Sección 8 */}
           <section id="seccion-8" data-section="seccion-8" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>08 </span> Si ya cometió algún error, no todo está perdido</h2>
             </div>
 
@@ -504,7 +504,7 @@ const LLCBlogPost = () => {
           {/* Sección 9 */}
           <section id="seccion-9" data-section="seccion-9" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>09 </span> ¿Qué debe tener claro después de hoy?</h2>
             </div>
 
@@ -540,7 +540,7 @@ const LLCBlogPost = () => {
           {/* Sección 10 */}
           <section id="seccion-10" data-section="seccion-10" className={styles.section}>
             <div className={styles.sectionHeader}>
-              
+
               <h2 className={styles.sectionTitle}><span className={styles.sectionNumber}>10 </span> Siguientes pasos recomendados</h2>
             </div>
 
@@ -554,7 +554,7 @@ const LLCBlogPost = () => {
                 <div className={styles.actionBadge}>Comenzar ahora</div>
               </div>
 
-             
+
 
               <div className={`${styles.actionCard} ${styles.actionCardSecondary}`}>
                 <div className={styles.actionIcon}>🏦</div>
@@ -580,7 +580,7 @@ const LLCBlogPost = () => {
             </div>
           </section>
 
-         
+
         </main>
       </div>
     </div>

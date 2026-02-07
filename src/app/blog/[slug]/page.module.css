@@ -1,6 +1,29 @@
+/* Main: reservar espacio para el nav fijo y evitar overlap en móvil */
+.main {
+  padding-top: 5rem; /* base para nav fijo */
+}
+
 .article {
-  padding: 8rem 2rem 4rem;
+  padding: 3rem 2rem 4rem; /* .main ya reserva espacio para el nav */
   min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 5.5rem; /* móvil: más espacio para nav (puede ser más alto) */
+  }
+
+  .article {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .excerpt {
+    font-size: 1.1rem;
+  }
 }
 
 .coverImageWrapper {
@@ -53,17 +76,9 @@
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .article {
-    padding: 6rem 1.5rem 3rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .excerpt {
-    font-size: 1.1rem;
+@media (max-width: 480px) {
+  .main {
+    padding-top: 6rem; /* pantallas muy pequeñas: margen extra bajo el nav */
   }
 }
 

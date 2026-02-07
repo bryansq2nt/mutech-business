@@ -111,7 +111,7 @@ export default async function BlogPostPage({
   return (
     <>
       <Navigation />
-      <main style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', minHeight: '100vh' }}>
+      <main className={styles.main} style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', minHeight: '100vh' }}>
         <article className={styles.article}>
           <div className="container">
             {post.coverImage && (
